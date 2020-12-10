@@ -17,6 +17,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_actionFile_triggered()
 {
     currentFile.clear();
+    setWindowTitle("Untitled");
     ui->textEdit->setText(QString());
 }
 
@@ -54,4 +55,35 @@ void MainWindow::on_actionSave_as_triggered()
     //Output stream is open for file
     out<<text;
     file.close(); // close the current file..i.e the file open in backend QT context
+}
+
+
+void MainWindow::on_actionQuit_triggered()
+{
+    QApplication::quit();
+}
+
+void MainWindow::on_actionCopy_triggered()
+{
+    ui->textEdit->copy();
+}
+
+void MainWindow::on_actionPaste_triggered()
+{
+    ui->textEdit->paste();
+}
+
+void MainWindow::on_actionUndo_triggered()
+{
+    ui->textEdit->undo();
+}
+
+void MainWindow::on_actionRedo_triggered()
+{
+    ui->textEdit->redo();
+}
+
+void MainWindow::on_actionCut_triggered()
+{
+    ui->textEdit->cut();
 }

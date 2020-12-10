@@ -7,8 +7,6 @@
 #include<QFileDialog>
 #include<QMessageBox>
 #include<QTextStream>
-#include <QPrinter>
-#include <QPrintDialog>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -27,6 +25,18 @@ private slots:
     void on_actionFile_triggered();
 
     void on_actionSave_as_triggered();
+
+    void on_actionQuit_triggered();
+
+    void on_actionCopy_triggered();
+
+    void on_actionPaste_triggered();
+
+    void on_actionUndo_triggered();
+
+    void on_actionRedo_triggered();
+
+    void on_actionCut_triggered();
 
 private:
     Ui::MainWindow *ui;
