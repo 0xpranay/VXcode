@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setCentralWidget(ui->textEdit);
+    ui->textEdit->setFontPointSize(18);
+    ui->textEdit->setCurrentFont(QFont("Monaco", 18, -1,false));
 }
 
 MainWindow::~MainWindow()
